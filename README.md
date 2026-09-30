@@ -16,6 +16,10 @@
 
 Instead of requiring users to identify the exact technical issue or manually search through support documentation, SGTE accepts complaints in everyday language and processes them through a modular troubleshooting pipeline.
 
+## 🎥 Project Demo
+
+[▶️ Watch the SGTE Demo Video on Google Drive](https://drive.google.com/file/d/1ft-l4zgrdoLiRPp9lHoSI-PkXXjSswt2/view?usp=drive_link)
+
 ### Example
 
 **User input**
