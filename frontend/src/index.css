@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Phase 51 — green / mint identity (token names kept for component compatibility) */
+  --color-void: #f3fbf5;
+  --color-navy: #064e3b;
+  --color-surface: #ffffff;
+  --color-surface-2: #ddf7e5;
+  --color-ink: #102a26;
+  --color-ink-soft: #647a70;
+  --color-muted: #647a70;
+  --color-line: #cde9d4;
+  --color-line-strong: #a8d4b6;
+  --color-accent: #168b45;
+  --color-accent-deep: #064e3b;
+  --color-cyan: #36c96b;
+  --color-glow: #168b45;
+  --color-success: #36c96b;
+  --color-warn: #e6b84d;
+  --color-critical: #d64545;
+  --color-manual: #647a70;
+  --color-paper: #ffffff;
+  --color-mist: #ddf7e5;
+  --color-mint: #ddf7e5;
+  --color-pale: #f3fbf5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    background-color: var(--color-pale);
+    background-image:
+      radial-gradient(ellipse 900px 520px at 8% -5%, rgba(221, 247, 229, 0.95), transparent 55%),
+      radial-gradient(ellipse 700px 480px at 95% 5%, rgba(54, 201, 107, 0.08), transparent 50%),
+      linear-gradient(180deg, #f3fbf5 0%, #ffffff 40%, #f3fbf5 100%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: rgba(22, 139, 69, 0.22);
+    color: #102a26;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .sgte-glow {
+    box-shadow:
+      0 0 0 1px rgba(22, 139, 69, 0.12),
+      0 16px 40px -24px rgba(6, 78, 59, 0.28);
+  }
+
+  .sgte-card {
+    background: #ffffff;
+    border: 1px solid var(--color-line);
+    border-radius: 1.25rem;
+    box-shadow: 0 12px 36px -28px rgba(6, 78, 59, 0.35);
+  }
+
+  .sgte-input-shell {
+    background: #ffffff;
+    border: 1px solid var(--color-line);
+    box-shadow:
+      0 0 0 1px rgba(221, 247, 229, 0.8),
+      0 18px 40px -28px rgba(6, 78, 59, 0.3);
+  }
+
+  .sgte-orb {
+    background:
+      radial-gradient(circle at 35% 30%, rgba(54, 201, 107, 0.35), transparent 42%),
+      radial-gradient(circle at 70% 65%, rgba(22, 139, 69, 0.28), transparent 48%),
+      radial-gradient(circle at 50% 50%, rgba(221, 247, 229, 0.8), transparent 70%);
+  }
+
+  .sgte-btn-primary {
+    background: linear-gradient(135deg, #36c96b 0%, #168b45 55%, #064e3b 100%);
+    color: #ffffff;
+    box-shadow: 0 10px 28px -12px rgba(22, 139, 69, 0.65);
+  }
+
+  .sgte-btn-primary:hover:enabled {
+    filter: brightness(1.05);
+  }
+
+  .sgte-gradient-text {
+    background: linear-gradient(120deg, #36c96b, #168b45);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}

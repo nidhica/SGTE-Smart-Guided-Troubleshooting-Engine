@@ -1,0 +1,70 @@
+.sgte_index/
+.pytest_cache/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+evaluation/phase2_baseline_report.json
+evaluation/phase3_baseline_report.json
+evaluation/phase3_1_baseline_report.json
+evaluation/phase4_cache_report.json
+evaluation/cache_threshold_report.json
+evaluation/results/phase6_results.json
+evaluation/results/phase6_results.md
+evaluation/results/phase7_accuracy.json
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Node / React
+node_modules/
+dist/
+build/
+
+# IDE / editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated evaluation results
+evaluation/results/*
+!evaluation/results/.gitkeep
+
+# Participant / competition kit
+participant-kit-all-themes (1)/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+participant-kit-all-themes (1)/
+
+# Internal evaluation artifacts
+evaluation/
+
+# Local development/debug files
+_trace_7query_coverage.py
+scratch_test.py
+# Historical phase documentation
+docs/PHASE*.md
+
+tests/fixtures/
